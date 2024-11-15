@@ -18,7 +18,7 @@ function toggleTheme() {
 
 <template>
   <nav class="d-flex flex-column">
-    <div class="navbar-brand d-flex justify-content-center align-items-center mt-5" :to="{ name: 'Home' }">
+    <div class="navbar-brand d-flex justify-content-center align-items-center mt-5">
       <div class="picture-container d-flex justify-content-center align-items-center">
         <img alt="logo" src="/img/cw-logo.png" />
       </div>
