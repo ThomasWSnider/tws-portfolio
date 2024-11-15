@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import { loadState, saveState } from '../utils/Store.js';
 
-const theme = ref(loadState('theme') || 'light')
+const theme = ref(loadState('theme') || 'dark')
 
 onMounted(() => {
   document.documentElement.setAttribute('data-bs-theme', theme.value)
@@ -17,26 +17,42 @@ function toggleTheme() {
 </script>
 
 <template>
-  <nav class="bg-dark px-3">
-    <router-link class="navbar-brand d-flex" :to="{ name: 'Home' }">
-      <div class="d-flex flex-column align-items-center">
-        <img alt="logo" src="/img/cw-logo.png" height="45" />
+  <nav class="d-flex flex-column">
+    <div class="navbar-brand d-flex justify-content-center align-items-center mt-5" :to="{ name: 'Home' }">
+      <div class="picture-container d-flex justify-content-center align-items-center">
+        <img alt="logo" src="/img/cw-logo.png" />
       </div>
-    </router-link>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav me-auto">
+    </div>
+    <div class="navbar-collapse d-flex flex-column mt-5" id="navbarText">
+      <ul class="navbar-nav mx-auto mb-4">
         <li>
-          <router-link :to="{ name: 'About' }" class="btn text-success lighten-30 selectable text-uppercase">
+          <router-link :to="{ name: 'About' }" class="btn fs-6 text-light lighten-30 selectable text-uppercase">
             About
           </router-link>
         </li>
       </ul>
-      <!-- LOGIN COMPONENT HERE -->
+      <ul class="navbar-nav mx-auto mb-4">
+        <li>
+          <router-link :to="{ name: 'About' }" class="btn fs-6 text-light lighten-30 selectable text-uppercase">
+            Skills
+          </router-link>
+        </li>
+      </ul>
+      <ul class="navbar-nav mx-auto mb-4">
+        <li>
+          <router-link :to="{ name: 'About' }" class="btn fs-6 text-light lighten-30 selectable text-uppercase">
+            Projects
+          </router-link>
+        </li>
+      </ul>
+      <ul class="navbar-nav mx-auto mb-4">
+        <li>
+          <router-link :to="{ name: 'About' }" class="btn fs-6 text-light lighten-30 selectable text-uppercase">
+            Contact Me
+          </router-link>
+        </li>
+      </ul>
       <div>
-        <button class="btn text-light" @click="toggleTheme"
-          :title="`Enable ${theme == 'light' ? 'dark' : 'light'} theme.`">
-          <Icon :name="theme == 'light' ? 'weather-sunny' : 'weather-night'" />
-        </button>
       </div>
     </div>
   </nav>
@@ -47,19 +63,29 @@ a:hover {
   text-decoration: none;
 }
 
+img {
+  height: 8em;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+nav {
+  height: 100dvh;
+}
+
+.picture-container {
+  height: 15em;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: var(--bs-page);
+  margin-top: 30px;
+}
+
 .nav-link {
   text-transform: uppercase;
 }
 
 .navbar-nav .router-link-exact-active {
-  border-bottom: 2px solid var(--bs-success);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-@media screen and (min-width: 576px) {
-  nav {
-    height: 100dvh;
-  }
+  font-weight: bold;
 }
 </style>

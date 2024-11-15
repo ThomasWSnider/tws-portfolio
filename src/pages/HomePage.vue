@@ -3,14 +3,25 @@
 </script>
 
 <template>
-  <div class="home flex-grow-1 d-flex flex-column align-items-center justify-content-center">
-    <div class="home-card p-5 card align-items-center shadow rounded elevation-3">
-      <img src="@/assets/img/cw-circle-logo.png" alt="CodeWorks Logo"
-        class="rounded-circle">
-      <h1 class="my-5 bg-dark text-white p-3 rounded text-center">
-        Vue 3 Starter
-      </h1>
+  <div class="row">
+    <div class="col-7">
+      <div class="row ps-4">
+        <div class="col-12">
+          <p class="fs-5 mt-5">Hello!</p>
+        </div>
+        <div class="col-12 mt-3">
+          <p class="display-3">I'm <span class="fw-semibold text-warning">Thomas Snider</span></p>
+        </div>
+        <div class="col-12 mt-5">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid ducimus sapiente excepturi, quibusdam
+            inventore magni quidem eveniet accusantium distinctio iure veritatis ratione animi atque, temporibus facilis
+            sunt ipsam. Sint minima totam quae accusamus nisi, fuga rem libero alias aspernatur atque, earum laudantium
+            optio, eum mollitia odit commodi omnis repudiandae et eveniet maiores sequi debitis. Ratione nam ullam
+            necessitatibus voluptates odio.</p>
+        </div>
+      </div>
     </div>
+    <div class="col-5"></div>
   </div>
 </template>
 

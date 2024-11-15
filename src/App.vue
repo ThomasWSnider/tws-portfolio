@@ -6,12 +6,14 @@ import { AppState } from './AppState.js';
 
 <template>
   <main>
-    <div class="row">
-      <div class="col-3">
-        <Navbar />
-      </div>
-      <div class="col-9">
-        <router-view />
+    <div class="container-fluid">
+      <div class="row">
+        <div id="navbar-container" class="col-lg-3 col-md-4 col-12 bg-dark">
+          <Navbar />
+        </div>
+        <div class="col-lg-9 col-md-8 col-12">
+          <router-view />
+        </div>
       </div>
     </div>
   </main>
@@ -24,9 +26,7 @@ import { AppState } from './AppState.js';
   --main-height: calc(100vh - 32px - 64px);
 }
 
-footer {
-  display: grid;
-  place-content: center;
-  height: 32px;
+#navbar-container {
+  border-right: 1px solid var(--bs-border-color-translucent);
 }
 </style>
