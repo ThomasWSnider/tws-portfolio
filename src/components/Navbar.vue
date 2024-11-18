@@ -26,30 +26,30 @@ function toggleTheme() {
     <div class="navbar-collapse d-flex flex-column mt-5" id="navbarText">
       <ul class="navbar-nav mx-auto mb-4">
         <li>
-          <router-link :to="{ name: 'Home' }" class="btn fs-6 text-light lighten-30 selectable text-uppercase">
+          <a class="btn fs-6 text-light lighten-30 selectable text-uppercase">
             About Me
-          </router-link>
+          </a>
         </li>
       </ul>
       <ul class="navbar-nav mx-auto mb-4">
         <li>
-          <router-link :to="{ name: 'About' }" class="btn fs-6 text-light lighten-30 selectable text-uppercase">
+          <a class="btn fs-6 text-light lighten-30 selectable text-uppercase">
             Skills
-          </router-link>
+          </a>
         </li>
       </ul>
       <ul class="navbar-nav mx-auto mb-4">
         <li>
-          <router-link :to="{ name: 'About' }" class="btn fs-6 text-light lighten-30 selectable text-uppercase">
+          <a class="btn fs-6 text-light lighten-30 selectable text-uppercase">
             Projects
-          </router-link>
+          </a>
         </li>
       </ul>
       <ul class="navbar-nav mx-auto mb-4">
         <li>
-          <router-link :to="{ name: 'About' }" class="btn fs-6 text-light lighten-30 selectable text-uppercase">
+          <a class="btn fs-6 text-light lighten-30 selectable text-uppercase">
             Contact Me
-          </router-link>
+          </a>
         </li>
       </ul>
       <div>

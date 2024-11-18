@@ -10,11 +10,6 @@ const routes = [
     path: '/',
     name: 'Home',
     component: loadPage('HomePage')
-  },
-  {
-    path: '/about',
-    name: 'About',
-    component: loadPage('AboutPage')
   }
 ]
 
