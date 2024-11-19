@@ -17,43 +17,45 @@ function toggleTheme() {
 </script>
 
 <template>
-  <nav class="d-flex flex-column">
-    <div class="navbar-brand d-flex justify-content-center align-items-center mt-5">
-      <div class="picture-container d-flex justify-content-center align-items-center">
-        <img alt="logo" src="/img/cw-logo.png" />
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark px-3">
+    <div class="navbar-brand d-flex">
+      <div class="d-flex flex-column align-items-center">
+        <p class="fs-1 fw-semibold my-3">Thomas Snider</p>
       </div>
     </div>
-    <div class="navbar-collapse d-flex flex-column mt-5" id="navbarText">
-      <ul class="navbar-nav mx-auto mb-4">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end me-5" id="navbarText">
+      <ul class="navbar-nav ms-2">
         <li>
-          <a class="btn fs-6 text-light lighten-30 selectable text-uppercase">
-            About Me
-          </a>
+          <div class="btn text-light lighten-30 selectable fs-6">
+            About
+          </div>
         </li>
       </ul>
-      <ul class="navbar-nav mx-auto mb-4">
+      <ul class="navbar-nav ms-2">
         <li>
-          <a class="btn fs-6 text-light lighten-30 selectable text-uppercase">
-            Skills
-          </a>
+          <div class="btn text-light lighten-30 selectable fs-6">
+            Resume
+          </div>
         </li>
       </ul>
-      <ul class="navbar-nav mx-auto mb-4">
+      <ul class="navbar-nav ms-2">
         <li>
-          <a class="btn fs-6 text-light lighten-30 selectable text-uppercase">
+          <div class="btn text-light lighten-30 selectable fs-6">
             Projects
-          </a>
+          </div>
         </li>
       </ul>
-      <ul class="navbar-nav mx-auto mb-4">
+      <ul class="navbar-nav ms-2">
         <li>
-          <a class="btn fs-6 text-light lighten-30 selectable text-uppercase">
-            Contact Me
-          </a>
+          <div class="btn text-light lighten-30 selectable fs-6">
+            Contact
+          </div>
         </li>
       </ul>
-      <div>
-      </div>
     </div>
   </nav>
 </template>
@@ -63,29 +65,19 @@ a:hover {
   text-decoration: none;
 }
 
-img {
-  height: 8em;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-}
-
-nav {
-  height: 100dvh;
-}
-
-.picture-container {
-  height: 15em;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
-  background-color: var(--bs-page);
-  margin-top: 30px;
-}
-
 .nav-link {
   text-transform: uppercase;
 }
 
 .navbar-nav .router-link-exact-active {
-  font-weight: bold;
+  border-bottom: 2px solid var(--bs-success);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+@media screen and (min-width: 576px) {
+  nav {
+    height: 64px;
+  }
 }
 </style>

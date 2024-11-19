@@ -5,13 +5,13 @@ import { AppState } from './AppState.js';
 </script>
 
 <template>
+  <header>
+    <Navbar />
+  </header>
   <main>
     <div class="container-fluid">
       <div class="row">
-        <div id="navbar-container" class="col-xl-2 col-lg-3 col-md-4 col-12 bg-dark">
-          <Navbar />
-        </div>
-        <div class="col-xl 10 col-lg-9 col-md-8 col-12">
+        <div class="col-12">
           <router-view />
         </div>
       </div>
