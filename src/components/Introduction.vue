@@ -11,7 +11,7 @@
     <p class="display-3 mb-0">I'm <span class="fw-semibold text-warning">Thomas Snider</span></p>
   </div>
   <div class="col-12 mt-3">
-    <p class="about-description">I am a driven and versatile web developer with a passion for problem solvingI.
+    <p>I am a driven and versatile web developer with a passion for problem solvingI.
       recently graduated from Boise Codeworks, a 12 week coding bootcamp, where I learned the ins and outs of web
       development
       with

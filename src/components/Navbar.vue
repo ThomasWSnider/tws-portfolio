@@ -7,20 +7,13 @@ const theme = ref(loadState('theme') || 'dark')
 onMounted(() => {
   document.documentElement.setAttribute('data-bs-theme', theme.value)
 })
-
-function toggleTheme() {
-  theme.value = theme.value == 'light' ? 'dark' : 'light'
-  document.documentElement.setAttribute('data-bs-theme', theme.value)
-  saveState('theme', theme.value)
-}
-
 </script>
 
 <template>
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark px-3">
     <div class="navbar-brand d-flex">
       <div class="d-flex flex-column align-items-center">
-        <p class="fs-1 fw-semibold my-3">Thomas Snider</p>
+        <p class="fs-1 fw-semibold my-1">Thomas Snider</p>
       </div>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -28,28 +21,28 @@ function toggleTheme() {
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end me-5" id="navbarText">
-      <ul class="navbar-nav ms-2">
+      <ul class="navbar-nav ms-4">
         <li>
           <div class="btn text-light lighten-30 selectable fs-6">
             About
           </div>
         </li>
       </ul>
-      <ul class="navbar-nav ms-2">
+      <ul class="navbar-nav ms-4">
         <li>
           <div class="btn text-light lighten-30 selectable fs-6">
             Resume
           </div>
         </li>
       </ul>
-      <ul class="navbar-nav ms-2">
+      <ul class="navbar-nav ms-4">
         <li>
           <div class="btn text-light lighten-30 selectable fs-6">
             Projects
           </div>
         </li>
       </ul>
-      <ul class="navbar-nav ms-2">
+      <ul class="navbar-nav ms-4">
         <li>
           <div class="btn text-light lighten-30 selectable fs-6">
             Contact
@@ -77,7 +70,7 @@ a:hover {
 
 @media screen and (min-width: 576px) {
   nav {
-    height: 64px;
+    height: 70px;
   }
 }
 </style>
