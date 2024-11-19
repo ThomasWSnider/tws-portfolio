@@ -9,7 +9,7 @@ import { AppState } from './AppState.js';
     <Navbar />
   </header>
   <main>
-    <div class="container-fluid">
+    <div id="mainContent" class="container mt-5 rounded">
       <div class="row">
         <div class="col-12">
           <router-view />
@@ -26,7 +26,7 @@ import { AppState } from './AppState.js';
   --main-height: calc(100vh - 32px - 70px);
 }
 
-#navbar-container {
-  border-right: 1px solid var(--bs-border-color-translucent);
+#mainContent {
+  background-color: #000000b0;
 }
 </style>

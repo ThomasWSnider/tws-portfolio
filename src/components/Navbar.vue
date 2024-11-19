@@ -10,7 +10,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark px-3">
+  <nav class="navbar navbar-expand-sm navbar-dark px-3">
     <div class="navbar-brand d-flex">
       <div class="d-flex flex-column align-items-center">
         <p class="fs-1 fw-semibold my-1">Thomas Snider</p>
@@ -66,6 +66,10 @@ a:hover {
   border-bottom: 2px solid var(--bs-success);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+}
+
+nav {
+  background-color: #000000b0;
 }
 
 @media screen and (min-width: 576px) {

@@ -5,7 +5,7 @@
 
 <template>
   <div class="col-12">
-    <p class="fs-5 mt-5 mb-0">Hello!</p>
+    <p class="fs-5 mt-2 mb-0">Hello!</p>
   </div>
   <div class="col-12">
     <p class="display-3 mb-0">I'm <span class="fw-semibold text-warning">Thomas Snider</span></p>
