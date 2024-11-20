@@ -21,9 +21,7 @@ import Skills from "@/components/Skills.vue";
     </div>
     <!-- SECTION Skills and Experience -->
     <div class="col-12 mt-5">
-      <div class="row px-4">
-        <Skills />
-      </div>
+      <Skills />
     </div>
   </div>
 </template>
