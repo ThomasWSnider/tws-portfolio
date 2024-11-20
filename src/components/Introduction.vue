@@ -1,17 +1,21 @@
 <script setup>
+import SectionHeader from "./globals/SectionHeader.vue";
+
 
 </script>
 
 
 <template>
   <div class="col-12">
-    <div class="d-flex align-items-center">
-      <p class="fs-5 mt-2 mb-1 text-subtle fw-semibold">About Me</p>
-      <div class="section-header"></div>
-    </div>
+    <SectionHeader title="About" id="about" />
+  </div>
+  <div class="col-12 mt-2">
+    <p class="fs-1 fw-bold">Hello There!</p>
   </div>
   <div class="col-12 mt-3">
-    <p>I am a driven and versatile web developer with a passion for problem solving. I
+    <p>I am a driven and versatile web developer with a
+      passion for problem
+      solving. I
       recently graduated from Boise Codeworks, a 12 week coding bootcamp, where I learned the ins and outs of web
       development
       with
