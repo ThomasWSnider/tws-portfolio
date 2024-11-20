@@ -10,8 +10,8 @@ import { AppState } from './AppState.js';
   </header>
   <main>
     <div class="container-fluid mt-5 rounded d-flex justify-content-center">
-      <div id="mainContent" class="row py-3">
-        <div class="col-12">
+      <div id="mainContent" class="row py-3 mt-5">
+        <div class="col-12 mt-5">
           <router-view />
         </div>
       </div>
@@ -27,7 +27,7 @@ import { AppState } from './AppState.js';
 }
 
 #mainContent {
-  background-color: #000000b0;
-  max-width: 95dvw;
+  background-color: #000000e6;
+  max-width: 85dvw;
 }
 </style>

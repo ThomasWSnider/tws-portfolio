@@ -10,7 +10,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-sm navbar-dark px-3">
+  <nav class="navbar navbar-expand-sm navbar-dark px-3 fixed-top">
     <div class="navbar-brand d-flex">
       <div class="d-flex flex-column align-items-center">
         <p class="display-5 fw-bold my-1 ms-5">Thomas Snider</p>
@@ -23,16 +23,16 @@ onMounted(() => {
     <div class="collapse navbar-collapse justify-content-end me-5" id="navbarText">
       <ul class="navbar-nav ms-4">
         <li>
-          <div class="btn text-light lighten-30 selectable fs-6 fw-semibold" href="#">
+          <a href="#" class="btn text-light lighten-30 selectable fs-6 fw-semibold">
             About
-          </div>
+          </a>
         </li>
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <div class="btn text-light lighten-30 selectable fs-6 fw-semibold">
+          <a href="#skills" class="btn text-light lighten-30 selectable fs-6 fw-semibold">
             Skills
-          </div>
+          </a>
         </li>
       </ul>
       <ul class="navbar-nav ms-4">
@@ -62,14 +62,14 @@ a:hover {
   text-transform: uppercase;
 }
 
-.navbar-nav .router-link-exact-active {
+a.active {
   border-bottom: 2px solid var(--bs-success);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 nav {
-  background-color: #000000b0;
+  background-color: #000000e6;
 }
 
 @media screen and (min-width: 576px) {

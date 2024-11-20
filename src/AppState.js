@@ -6,42 +6,47 @@ export const AppState = reactive({
   skills: [
     {
       name: "HTML",
-      logo: "mdi-language-html5",
+      logo: "language-html5",
       color: "#e34c26"
     },
     {
       name: "CSS",
-      logo: "mdi-language-css3",
+      logo: "language-css3",
       color: "#264de4"
     },
     {
       name: "JavaScript",
-      logo: "mdi-language-javascript",
+      logo: "language-javascript",
       color: "#f7df1e"
     },
     {
-      name: "C#",
-      logo: "mdi-language-csharp",
+      name: "C Sharp",
+      logo: "language-csharp",
       color: "#876ce1"
     },
     {
       name: "SQL",
-      logo: "mdi-database",
+      logo: "dolphin",
       color: "#00618a"
     },
     {
+      name: "MongoDB",
+      logo: "database",
+      color: "#00684a"
+    },
+    {
       name: "Vue.js",
-      logo: "mdi-vuejs",
+      logo: "vuejs",
       color: "#42b883"
     },
     {
       name: "Node.js",
-      logo: "mdi-nodejs",
+      logo: "nodejs",
       color: "#44883e"
     },
     {
       name: "Bootstrap",
-      logo: "mdi-bootstrap",
+      logo: "bootstrap",
       color: "#563d7c"
     }
   ]

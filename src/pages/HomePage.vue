@@ -20,7 +20,7 @@ import Skills from "@/components/Skills.vue";
         alt="The feline placeholder" id="profileImg" class="rounded-1">
     </div>
     <!-- SECTION Skills and Experience -->
-    <div class="col-12 mt-5">
+    <div class="col-12 mt-5 px-4">
       <Skills />
     </div>
   </div>
