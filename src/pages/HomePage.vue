@@ -1,5 +1,6 @@
 <script setup>
 import Introduction from "@/components/Introduction.vue";
+import Skills from "@/components/Skills.vue";
 
 
 </script>
@@ -8,7 +9,7 @@ import Introduction from "@/components/Introduction.vue";
   <div class="row">
     <!-- SECTION Introduction and Photo -->
     <div class="col-7">
-      <div class="row ps-4">
+      <div class="row px-4">
         <Introduction />
       </div>
     </div>
@@ -16,7 +17,13 @@ import Introduction from "@/components/Introduction.vue";
       <div class="spacer"></div>
       <img
         src="https://images.unsplash.com/photo-1445499348736-29b6cdfc03b9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="The feline placeholder" id="profileImg" class="rounded">
+        alt="The feline placeholder" id="profileImg" class="rounded-1">
+    </div>
+    <!-- SECTION Skills and Experience -->
+    <div class="col-12 mt-5">
+      <div class="row px-4">
+        <Skills />
+      </div>
     </div>
   </div>
 </template>

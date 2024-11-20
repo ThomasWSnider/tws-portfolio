@@ -31,7 +31,7 @@ onMounted(() => {
       <ul class="navbar-nav ms-4">
         <li>
           <div class="btn text-light lighten-30 selectable fs-6 fw-semibold">
-            Resume
+            Skills
           </div>
         </li>
       </ul>
