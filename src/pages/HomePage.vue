@@ -11,9 +11,6 @@ import Introduction from "@/components/Introduction.vue";
         <Introduction />
       </div>
     </div>
-    <div class="row">
-
-    </div>
     <div class="col-5"></div>
   </div>
 </template>

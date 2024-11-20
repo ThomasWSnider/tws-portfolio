@@ -13,7 +13,7 @@ onMounted(() => {
   <nav class="navbar navbar-expand-sm navbar-dark px-3">
     <div class="navbar-brand d-flex">
       <div class="d-flex flex-column align-items-center">
-        <p class="fs-1 fw-semibold my-1">Thomas Snider</p>
+        <p class="fs-1 fw-bold my-1 ms-5">Thomas Snider</p>
       </div>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
@@ -23,28 +23,28 @@ onMounted(() => {
     <div class="collapse navbar-collapse justify-content-end me-5" id="navbarText">
       <ul class="navbar-nav ms-4">
         <li>
-          <div class="btn text-light lighten-30 selectable fs-6">
+          <div class="btn text-light lighten-30 selectable fs-6 fw-semibold">
             About
           </div>
         </li>
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <div class="btn text-light lighten-30 selectable fs-6">
+          <div class="btn text-light lighten-30 selectable fs-6 fw-semibold">
             Resume
           </div>
         </li>
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <div class="btn text-light lighten-30 selectable fs-6">
+          <div class="btn text-light lighten-30 selectable fs-6 fw-semibold">
             Projects
           </div>
         </li>
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <div class="btn text-light lighten-30 selectable fs-6">
+          <div class="btn text-light lighten-30 selectable fs-6 fw-semibold">
             Contact
           </div>
         </li>

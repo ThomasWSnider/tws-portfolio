@@ -5,13 +5,13 @@
 
 <template>
   <div class="col-12">
-    <p class="fs-5 mt-2 mb-0">Hello!</p>
-  </div>
-  <div class="col-12">
-    <p class="display-3 mb-0">I'm <span class="fw-semibold text-warning">Thomas Snider</span></p>
+    <div class="d-flex align-items-center">
+      <p class="fs-5 mt-2 mb-1 text-subtle fw-semibold">About Me</p>
+      <div class="section-header"></div>
+    </div>
   </div>
   <div class="col-12 mt-3">
-    <p>I am a driven and versatile web developer with a passion for problem solvingI.
+    <p>I am a driven and versatile web developer with a passion for problem solving. I
       recently graduated from Boise Codeworks, a 12 week coding bootcamp, where I learned the ins and outs of web
       development
       with

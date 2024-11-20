@@ -9,8 +9,8 @@ import { AppState } from './AppState.js';
     <Navbar />
   </header>
   <main>
-    <div id="mainContent" class="container mt-5 rounded">
-      <div class="row">
+    <div class="container-fluid mt-5 rounded d-flex justify-content-center">
+      <div id="mainContent" class="row py-3">
         <div class="col-12">
           <router-view />
         </div>
@@ -28,5 +28,6 @@ import { AppState } from './AppState.js';
 
 #mainContent {
   background-color: #000000b0;
+  max-width: 95dvw;
 }
 </style>

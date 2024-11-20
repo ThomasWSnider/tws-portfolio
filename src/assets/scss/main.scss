@@ -21,3 +21,14 @@ a {
   text-decoration: none;
 }
 
+.text-subtle {
+  color: #aaaaaa;
+}
+
+.section-header {
+  height: 1px;
+  width: 120px;
+  background-color: var(--bs-warning);
+  margin: 4px 10px 0px;
+  display: inline-block;
+}
