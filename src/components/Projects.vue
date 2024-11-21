@@ -9,6 +9,11 @@ import SectionHeader from "./globals/SectionHeader.vue";
   <div class="section-header-padding">
     <SectionHeader title="Projects" id="projects" />
   </div>
+  <div class="row">
+    <div class="col-12">
+
+    </div>
+  </div>
 </template>
 
 
