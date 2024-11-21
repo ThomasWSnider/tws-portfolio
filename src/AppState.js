@@ -50,7 +50,19 @@ export const AppState = reactive({
       color: "#563d7c"
     }
   ],
+  /**@type {import('./models/Project.js').Project[]} */
+  projects: [
+    {
+      title: 'Keepr',
+      img: '',
+      description: ''
+    },
+    {
+      title: 'Keepr',
+      img: '',
+      description: ''
+    },
+  ]
 
-  
 })
 
