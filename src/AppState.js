@@ -2,7 +2,7 @@ import { reactive } from 'vue'
 
 // NOTE AppState is a reactive object to contain app level data
 export const AppState = reactive({
-  /**@type {import('./models/Skill.js').Skill[]} */
+  /**@type {import('./models/Skill.js').Skill[]} An array of objects containing data about relevant skills*/
   skills: [
     {
       name: "HTML",
@@ -31,7 +31,7 @@ export const AppState = reactive({
     },
     {
       name: "MongoDB",
-      logo: "database",
+      logo: "leaf",
       color: "#00684a"
     },
     {

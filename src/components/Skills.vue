@@ -22,8 +22,4 @@ const skills = computed(() => AppState.skills)
 </template>
 
 
-<style lang="scss" scoped>
-.section-header-padding {
-  padding: 0 12px 0 12px;
-}
-</style>
+<style lang="scss" scoped></style>

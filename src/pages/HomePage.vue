@@ -1,12 +1,13 @@
 <script setup>
 import Introduction from "@/components/Introduction.vue";
+import Projects from "@/components/Projects.vue";
 import Skills from "@/components/Skills.vue";
 
 
 </script>
 
 <template>
-  <div class="row">
+  <div class="row px-2">
     <!-- SECTION Introduction and Photo -->
     <div class="col-7">
       <div class="row px-4">
@@ -25,7 +26,7 @@ import Skills from "@/components/Skills.vue";
     </div>
     <!-- SECTION Projects -->
     <div class="col-12 mt-5 px-4">
-
+      <Projects />
     </div>
   </div>
 </template>
