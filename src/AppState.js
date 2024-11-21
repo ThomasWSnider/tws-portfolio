@@ -58,7 +58,7 @@ export const AppState = reactive({
       description: ''
     },
     {
-      title: 'Keepr',
+      title: 'Mind Palette',
       img: '',
       description: ''
     },

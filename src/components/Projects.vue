@@ -1,7 +1,9 @@
 <script setup>
+import { AppState } from "@/AppState";
 import SectionHeader from "./globals/SectionHeader.vue";
+import { computed } from "vue";
 
-
+const projects = computed(() => AppState.projects)
 </script>
 
 
