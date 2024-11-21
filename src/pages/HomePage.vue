@@ -23,6 +23,10 @@ import Skills from "@/components/Skills.vue";
     <div class="col-12 mt-5 px-4">
       <Skills />
     </div>
+    <!-- SECTION Projects -->
+    <div class="col-12 mt-5 px-4">
+
+    </div>
   </div>
 </template>
 

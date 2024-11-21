@@ -5,7 +5,7 @@ defineProps({ title: String, id: String })
 
 <template>
   <div :id="id" class="d-flex align-items-center">
-    <p class="fs-5 my-2 text-subtle fw-semibold">{{ title }}</p>
+    <p class="fs-6 my-2 text-subtle fw-semibold text-uppercase">{{ title }}</p>
     <div class="section-header"></div>
   </div>
 </template>
