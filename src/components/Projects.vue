@@ -2,6 +2,7 @@
 import { AppState } from "@/AppState";
 import SectionHeader from "./globals/SectionHeader.vue";
 import { computed } from "vue";
+import ProjectCard from "./ProjectCard.vue";
 
 const projects = computed(() => AppState.projects)
 </script>
@@ -12,8 +13,8 @@ const projects = computed(() => AppState.projects)
     <SectionHeader title="Projects" id="projects" />
   </div>
   <div class="row">
-    <div class="col-12">
-      <img src="/img/keepr-screenshot.png" alt="Keepr Screenshot">
+    <div v-for="project in projects" :key="project.title" class="col-12">
+      <ProjectCard :project="project" />
     </div>
   </div>
 </template>
