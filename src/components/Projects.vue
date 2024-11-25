@@ -12,7 +12,7 @@ const projects = computed(() => AppState.projects)
   <div class="section-header-padding">
     <SectionHeader title="Projects" id="projects" />
   </div>
-  <div class="row">
+  <div class="row mt-5">
     <div v-for="project in projects" :key="project.title" class="col-12">
       <ProjectCard :project="project" />
     </div>

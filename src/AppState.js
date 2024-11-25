@@ -59,7 +59,7 @@ export const AppState = reactive({
     },
     {
       title: 'Mind Palette',
-      img: '',
+      img: 'https://plus.unsplash.com/premium_photo-1680626561534-079425381952?q=80&w=2117&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       description: 'Mind Palette is a flashcard study app designed to help users efficiently create, manage, and study flashcards. Built with Vue.js, Node.js, Express, and MongoDB, the app features user registration and secure authentication via Auth0. Users can organize flashcards into decks, search and filter cards, and engage in study mode, which mimics the experience of physical flashcards. The app is responsive, user-friendly, and optimized for both desktop and mobile. MindPalette offers a seamless learning experience through its intuitive interface and robust functionality.'
     },
   ]
