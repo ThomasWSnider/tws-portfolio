@@ -37,9 +37,9 @@ onMounted(() => {
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <div class="btn text-light lighten-30 selectable fs-6 fw-semibold">
+          <a href="#projects" class="btn text-light lighten-30 selectable fs-6 fw-semibold">
             Projects
-          </div>
+          </a>
         </li>
       </ul>
       <ul class="navbar-nav ms-4">

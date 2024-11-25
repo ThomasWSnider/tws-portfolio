@@ -15,7 +15,12 @@ const routes = [
     path: '/skills',
     name: 'Skills',
     component: loadPage('HomePage')
-  }
+  },
+  {
+    path: '/projects',
+    name: 'Projects',
+    component: loadPage('HomePage')
+  },
 ]
 
 export const router = createRouter({

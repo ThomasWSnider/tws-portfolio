@@ -21,11 +21,13 @@ import Skills from "@/components/Skills.vue";
         alt="The feline placeholder" id="profileImg" class="rounded-1">
     </div>
     <!-- SECTION Skills and Experience -->
-    <div class="col-12 mt-5 px-4">
+    <div class="col-12 mt-5 px-4 position-relative">
+      <div class="position-absolute section-id" id="skills"></div>
       <Skills />
     </div>
     <!-- SECTION Projects -->
-    <div class="col-12 mt-5 px-4">
+    <div class="col-12 mt-5 px-4 position-relative">
+      <div class="position-absolute section-id" id="projects"></div>
       <Projects />
     </div>
   </div>
@@ -40,5 +42,12 @@ import Skills from "@/components/Skills.vue";
 
 .spacer {
   height: 46px;
+}
+
+.section-id {
+  top: -70px;
+  width: 1px;
+  height: 1px;
+  background-color: transparent;
 }
 </style>

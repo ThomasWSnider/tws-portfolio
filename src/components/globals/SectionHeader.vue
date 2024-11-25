@@ -1,10 +1,10 @@
 <script setup>
-defineProps({ title: String, id: String })
+defineProps({ title: String })
 </script>
 
 
 <template>
-  <div :id="id" class="d-flex align-items-center">
+  <div class="d-flex align-items-center">
     <p class="fs-6 my-2 text-subtle fw-semibold text-uppercase">{{ title }}</p>
     <div class="section-header"></div>
   </div>

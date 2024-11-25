@@ -12,7 +12,7 @@ const skills = computed(() => AppState.skills)
 
 <template>
   <div class="section-header-padding">
-    <SectionHeader title="Skills" id="skills" />
+    <SectionHeader title="Skills" />
   </div>
   <div class="row">
     <div v-for="skill in skills" :key="skill.name" class="col-3">

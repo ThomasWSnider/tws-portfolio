@@ -7,7 +7,7 @@ import SectionHeader from "./globals/SectionHeader.vue";
 
 <template>
   <div class="col-12">
-    <SectionHeader title="About" id="about" />
+    <SectionHeader title="About" />
   </div>
   <div class="col-12 mt-2">
     <p class="fs-1 fw-bold">Hello There!</p>
