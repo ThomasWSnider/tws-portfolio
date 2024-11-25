@@ -13,7 +13,7 @@ const projects = computed(() => AppState.projects)
   </div>
   <div class="row">
     <div class="col-12">
-
+      <img src="/img/keepr-screenshot.png" alt="Keepr Screenshot">
     </div>
   </div>
 </template>
