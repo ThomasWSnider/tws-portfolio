@@ -1,4 +1,5 @@
 <script setup>
+import Contact from "@/components/Contact.vue";
 import Introduction from "@/components/Introduction.vue";
 import Projects from "@/components/Projects.vue";
 import Skills from "@/components/Skills.vue";
@@ -30,10 +31,10 @@ import Skills from "@/components/Skills.vue";
       <div class="position-absolute section-id" id="projects"></div>
       <Projects />
     </div>
+    <!-- SECTION Contact Form -->
     <div class="col-12 mt-5 px-4 position-relative">
-      <div class="position-absolute section-id" id="contact">
-
-      </div>
+      <div class="position-absolute section-id" id="contact"></div>
+      <Contact />
     </div>
   </div>
 </template>
