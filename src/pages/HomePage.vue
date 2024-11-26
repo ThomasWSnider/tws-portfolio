@@ -30,6 +30,11 @@ import Skills from "@/components/Skills.vue";
       <div class="position-absolute section-id" id="projects"></div>
       <Projects />
     </div>
+    <div class="col-12 mt-5 px-4 position-relative">
+      <div class="position-absolute section-id" id="contact">
+
+      </div>
+    </div>
   </div>
 </template>
 
