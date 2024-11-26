@@ -55,7 +55,7 @@ export const AppState = reactive({
     {
       title: 'Keepr',
       img: '/img/keepr-screenshot.png',
-      description: 'Keepr is a full-stack application that allows users to explore, create, and organize keeps into personal vaults, with options for private or public vaults. Built with Vue.js and Vue Router for the frontend, a .NET Web API backend using the Repository pattern, and MySQL with Dapper for the database, the app integrates Auth0 for secure authentication. Key features include engagement tracking for keeps, detailed views, and private vault functionality. The project follows a Figma design mock-up, adhering to UI/UX best practices, and meets all functionality through a comprehensive API test suite.',
+      description: 'Keepr is a social media app that allows users to explore, create, and organize keeps into personal vaults, with options for private or public vaults. Built with Vue.js and Vue Router for the frontend, a .NET Web API backend using the Repository pattern, and MySQL with Dapper for the database, the app integrates Auth0 for secure authentication. Key features include engagement tracking for keeps, detailed views, and private vault functionality. The project follows a Figma design mock-up, adhering to UI/UX best practices, and meets all functionality through a comprehensive API test suite.',
       link: 'https://keepr.twsnider.work/'
     },
     {
