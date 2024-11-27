@@ -15,10 +15,8 @@ const editableMessageData = ref({
 
 
 <template>
-  <iframe name="hidden-iframe" id="hiddenIframe" style="display:none;"
-    onload="if(submitted)  {window.location='https:\/\/docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse';}"></iframe>
-  <form :action="googleFormURL" method="post" target="hiddenIframe" id="bootstrapForm"
-    onsubmit.prevent="submitted = true">
+  <iframe name="hidden-iframe" id="hiddenIframe" style="display:none;"></iframe>
+  <form method="post" target="hiddenIframe" id="bootstrapForm" onsubmit.prevent="submitted = true">
     <div class="row justify-content-center">
       <fieldset>
         <h2>Send Me A Message<br><small></small></h2>
