@@ -1,4 +1,5 @@
 <script setup>
+import ContactForm from "./ContactForm.vue";
 import SectionHeader from "./globals/SectionHeader.vue";
 
 
@@ -9,7 +10,9 @@ import SectionHeader from "./globals/SectionHeader.vue";
   <div class="section-header-padding">
     <SectionHeader title="Contact" />
   </div>
-
+  <div class="mt-5">
+    <ContactForm />
+  </div>
 </template>
 
 
