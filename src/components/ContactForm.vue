@@ -1,29 +1,24 @@
 <script setup>
-// This script requires jQuery and jquery-form plugin
-// You can use these ones from Cloudflare CDN:
+import { ref } from "vue";
 
-//
-$('#bootstrapForm').submit(function (event) {
-  event.preventDefault()
-  var extraData = {}
-  $('#bootstrapForm').ajaxSubmit({
-    data: extraData,
-    dataType: 'jsonp',  // This won't really work. It's just to use a GET instead of a POST to allow cookies from different domain.
-    error: function () {
-      // Submit of form should be successful but JSONP callback will fail because Google Forms
-      // does not support it, so this is handled as a failure.
-      alert('Form Submitted. Thanks.')
-      // You can also redirect the user to a custom thank-you page:
-      // window.location = 'http://www.mydomain.com/thankyoupage.html'
-    }
-  })
+let submitted = false
+const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse'
+
+const editableMessageData = ref({
+  name: '',
+  email: '',
+  subject: '',
+  message: ''
 })
+
 </script>
 
 
 <template>
-  <form action="https://docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse"
-    target="_self" id="bootstrapForm" method="POST">
+  <iframe name="hidden-iframe" id="hiddenIframe" style="display:none;"
+    onload="if(submitted)  {window.location='https:\/\/docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse';}"></iframe>
+  <form :action="googleFormURL" method="post" target="hiddenIframe" id="bootstrapForm"
+    onsubmit.prevent="submitted = true">
     <div class="row justify-content-center">
       <fieldset>
         <h2>Send Me A Message<br><small></small></h2>
@@ -34,7 +29,8 @@ $('#bootstrapForm').submit(function (event) {
         <fieldset>
           <legend for="1924068137">Email</legend>
           <div class="form-group">
-            <input id="1551830678" type="text" name="entry.1551830678" class="form-control" required>
+            <input v-model="editableMessageData.email" id="1551830678" type="text" name="entry.1551830678"
+              class="form-control" required>
           </div>
         </fieldset>
       </div>
@@ -45,7 +41,8 @@ $('#bootstrapForm').submit(function (event) {
         <fieldset>
           <legend for="1570205503">Name</legend>
           <div class="form-group">
-            <input id="520950269" type="text" name="entry.520950269" class="form-control" required>
+            <input v-model="editableMessageData.name" id="520950269" type="text" name="entry.520950269"
+              class="form-control" required>
           </div>
         </fieldset>
       </div>
@@ -55,7 +52,8 @@ $('#bootstrapForm').submit(function (event) {
         <fieldset>
           <legend for="2145665440">Subject</legend>
           <div class="form-group">
-            <input id="780295815" type="text" name="entry.780295815" class="form-control">
+            <input v-model="editableMessageData.subject" id="780295815" type="text" name="entry.780295815"
+              class="form-control">
           </div>
         </fieldset>
       </div>
@@ -65,8 +63,8 @@ $('#bootstrapForm').submit(function (event) {
         <fieldset>
           <legend for="1984878330">Message</legend>
           <div class="form-group">
-            <textarea id="1070418067" name="entry.1070418067" class="form-control" style="height: 129px;"
-              required></textarea>
+            <textarea v-model="editableMessageData.message" id="1070418067" name="entry.1070418067" class="form-control"
+              style="height: 129px;" required></textarea>
           </div>
         </fieldset>
       </div>
