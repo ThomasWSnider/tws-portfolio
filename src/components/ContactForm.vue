@@ -30,7 +30,7 @@ function handleIframeLoad() {
 
 <template>
   <iframe name="hiddenIframe" id="hiddenIframe" style="display:none;" @load="handleIframeLoad"></iframe>
-  <div v-if="!submitted" class="p-4">
+  <div v-if="submitted" class="p-5 bg-page">
     <ThankYouMessage />
   </div>
   <form v-else ref="form"
@@ -85,9 +85,6 @@ function handleIframeLoad() {
           </div>
         </fieldset>
       </div>
-
-      <input type="hidden" name="fvv" value="1">
-      <input type="hidden" name="fbzx" value="-2698408044705719117">
     </div>
   </form>
 </template>
