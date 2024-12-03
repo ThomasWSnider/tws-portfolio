@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from "vue";
+import ThankYouMessage from "./ThankYouMessage.vue";
 
-let submitted = false
-const googleFormURL = 'https://docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse'
+let submitted = ref(false);
 
 const editableMessageData = ref({
   name: '',
@@ -11,12 +11,31 @@ const editableMessageData = ref({
   message: ''
 })
 
+const googleForm = ref(null)
+
+function submitGoogleForm() {
+  submitted.value = true
+  const formElement = googleForm.value
+  const iframe = document.getElementById('hiddenIframe')
+  // @ts-ignore
+  formElement.target = iframe.name
+  formElement.submit()
+}
+
+function handleIframeLoad() {
+  return
+}
 </script>
 
 
 <template>
-  <iframe name="hidden-iframe" id="hiddenIframe" style="display:none;"></iframe>
-  <form method="post" target="hiddenIframe" id="bootstrapForm" onsubmit.prevent="submitted = true">
+  <iframe name="hiddenIframe" id="hiddenIframe" style="display:none;" @load="handleIframeLoad"></iframe>
+  <div v-if="!submitted" class="p-4">
+    <ThankYouMessage />
+  </div>
+  <form v-else ref="form"
+    action="https://docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse"
+    target="hiddenIframe" id="bootstrapForm" @submit.prevent="submitGoogleForm">
     <div class="row justify-content-center">
       <fieldset>
         <h2>Send Me A Message<br><small></small></h2>
@@ -69,16 +88,6 @@ const editableMessageData = ref({
 
       <input type="hidden" name="fvv" value="1">
       <input type="hidden" name="fbzx" value="-2698408044705719117">
-      <!--
-      CAVEAT: In multipages (multisection) forms, *pageHistory* field tells to google what sections we've currently completed.
-      This usually starts as "0" for the first page, then "0,1" in the second page... up to "0,1,2..N" in n-th page.
-      Keep this in mind if you plan to change this code to recreate any sort of multipage-feature in your exported form.
-      We're setting this to the total number of pages in this form because we're sending all fields from all the section together.
-      -->
-      <input type="hidden" name="pageHistory" value="0">
-      <div class="col-2 text-center mt-3">
-        <input class="btn btn-primary px-5 fs-5" type="submit" value="Send Message">
-      </div>
     </div>
   </form>
 </template>
