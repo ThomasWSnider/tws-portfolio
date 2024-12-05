@@ -10,7 +10,7 @@ import { AppState } from './AppState.js';
   </header>
   <main>
     <div class="container-fluid mt-5 rounded d-flex justify-content-center">
-      <div id="mainContent" class="row py-3 mt-5">
+      <div class="row py-3 mt-5 main-content">
         <div class="col-12 mt-5">
           <router-view />
         </div>
@@ -26,8 +26,12 @@ import { AppState } from './AppState.js';
   --main-height: calc(100vh - 32px - 70px);
 }
 
-#mainContent {
+.main-content {
   background-color: #000000e6;
   max-width: 85dvw;
+}
+
+div.container-fluid {
+  margin-bottom: 100px;
 }
 </style>

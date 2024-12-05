@@ -88,8 +88,8 @@ function handleIframeLoad() {
     </div>
     <input type="hidden" name="fvv" value="1">
     <input type="hidden" name="fbzx" value="-2698408044705719117">
-    <div class="col-2 text-center mt-3">
-      <input class="btn btn-primary px-5 fs-5" type="submit" value="Send Message">
+    <div class="col-12 text-center mt-4">
+      <input class="btn btn-warning px-5 fs-5" type="submit" value="Send">
     </div>
   </form>
 </template>
