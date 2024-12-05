@@ -33,7 +33,7 @@ function handleIframeLoad() {
   <div v-if="submitted" class="p-5 bg-page">
     <ThankYouMessage />
   </div>
-  <form v-else ref="form"
+  <form v-else ref="googleForm"
     action="https://docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse"
     target="hiddenIframe" id="bootstrapForm" @submit.prevent="submitGoogleForm">
     <div class="row justify-content-center">
@@ -85,6 +85,11 @@ function handleIframeLoad() {
           </div>
         </fieldset>
       </div>
+    </div>
+    <input type="hidden" name="fvv" value="1">
+    <input type="hidden" name="fbzx" value="-2698408044705719117">
+    <div class="col-2 text-center mt-3">
+      <input class="btn btn-primary px-5 fs-5" type="submit" value="Send Message">
     </div>
   </form>
 </template>
