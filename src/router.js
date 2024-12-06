@@ -21,6 +21,11 @@ const routes = [
     name: 'Projects',
     component: loadPage('HomePage')
   },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: loadPage('HomePage')
+  },
 ]
 
 export const router = createRouter({

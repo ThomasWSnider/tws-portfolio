@@ -3,10 +3,23 @@ import { onMounted, ref } from 'vue';
 import { loadState, saveState } from '../utils/Store.js';
 
 const theme = ref(loadState('theme') || 'dark')
+const sectionTags = ref([
+  { id: 'about', name: 'About' },
+  { id: 'skills', name: 'Skills' },
+  { id: 'projects', name: 'Projects' },
+  { id: 'contact', name: 'Contact' },
+])
+const activeSectionTag = ref(null)
 
 onMounted(() => {
   document.documentElement.setAttribute('data-bs-theme', theme.value)
+  handleSectionTagStyles()
 })
+
+function handleSectionTagStyles() {
+
+}
+
 </script>
 
 <template>
@@ -44,9 +57,9 @@ onMounted(() => {
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <div class="btn text-light lighten-30 selectable fs-6 fw-semibold">
+          <a href="#contact" class="btn text-light lighten-30 selectable fs-6 fw-semibold">
             Contact
-          </div>
+          </a>
         </li>
       </ul>
     </div>
@@ -63,7 +76,7 @@ a:hover {
 }
 
 a.active {
-  border-bottom: 2px solid var(--bs-success);
+  border-bottom: 2px solid var(--bs-warning);
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }

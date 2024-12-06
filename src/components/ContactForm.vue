@@ -35,12 +35,8 @@ function handleIframeLoad() {
   </div>
   <form v-else ref="googleForm"
     action="https://docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse"
-    target="hiddenIframe" id="bootstrapForm" @submit.prevent="submitGoogleForm">
+    target="hiddenIframe" id="bootstrapForm" @submit.prevent="submitGoogleForm" class="container px-4">
     <div class="row justify-content-center">
-      <fieldset>
-        <h2>Send Me A Message<br><small></small></h2>
-      </fieldset>
-
       <!-- Field type: "short" id: "1924068137" -->
       <div class="col-6 mt-3 mx-auto">
         <fieldset>
@@ -88,15 +84,22 @@ function handleIframeLoad() {
     </div>
     <input type="hidden" name="fvv" value="1">
     <input type="hidden" name="fbzx" value="-2698408044705719117">
-    <div class="col-12 text-center mt-4">
-      <input class="btn btn-warning px-5 fs-5" type="submit" value="Send">
-    </div>
   </form>
+  <div class="col-12 text-center mt-3">
+    <button class="btn btn-outline-warning px-5 fs-5" type="submit" form="bootstrapForm">Send Message</button>
+  </div>
 </template>
 
 
 <style lang="scss" scoped>
 textarea {
   resize: none;
+  outline: none !important;
+  border: none;
+}
+
+input {
+  outline: none !important;
+  border: none;
 }
 </style>
