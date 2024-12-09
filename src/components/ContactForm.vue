@@ -2,8 +2,8 @@
 import { ref } from "vue";
 import ThankYouMessage from "./ThankYouMessage.vue";
 import { AppState } from "@/AppState";
+import { logger } from "@/utils/Logger";
 
-let submitted = ref(AppState.submitted);
 
 const editableMessageData = ref({
   name: '',
@@ -15,12 +15,16 @@ const editableMessageData = ref({
 const googleForm = ref(null)
 
 function submitGoogleForm() {
-  submitted.value = true
+  AppState.submitted = true
   const formElement = googleForm.value
   const iframe = document.getElementById('hiddenIframe')
-  // @ts-ignore
-  formElement.target = iframe.name
-  formElement.submit()
+  if (formElement && iframe) {
+    // @ts-ignore
+    formElement.target = iframe.name
+    formElement.submit()
+  } else {
+    logger.log('an error ocurred when attempting to send message')
+  }
 }
 
 function handleIframeLoad() {
@@ -31,7 +35,7 @@ function handleIframeLoad() {
 
 <template>
   <iframe name="hiddenIframe" id="hiddenIframe" style="display:none;" @load="handleIframeLoad"></iframe>
-  <div v-if="submitted" class="p-5 bg-page">
+  <div v-if="AppState.submitted" class="p-5 bg-page">
     <ThankYouMessage />
   </div>
   <div v-else>

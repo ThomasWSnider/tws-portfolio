@@ -1,4 +1,9 @@
 <script setup>
+import { AppState } from "@/AppState";
+
+function resetForm() {
+  AppState.submitted = false
+}
 
 </script>
 
@@ -8,7 +13,8 @@
     <div class="d-flex flex-column justify-content-center align-items-center h-100">
       <p class="fs-2 fw-semibold mb-0">Thank You!</p>
       <i class="mdi mdi-check text-info display-2"></i>
-      <div class="btn-reset-form text-center">
+      <div @click="resetForm()" class="btn-reset-form text-center" role="button" aria-label="Send Me Another Message"
+        title="Send Me Another Message">
         <i class="mdi mdi-reload fs-5"></i>
       </div>
     </div>

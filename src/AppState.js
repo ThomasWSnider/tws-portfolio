@@ -3,7 +3,7 @@ import { reactive } from 'vue'
 // NOTE AppState is a reactive object to contain app level data
 export const AppState = reactive({
   /**@type {Boolean} whether the contact form has been submitted or not*/
-  submitted: true,
+  submitted: false,
   /**@type {import('./models/Skill.js').Skill[]} An array of objects containing data about relevant skills*/
   skills: [
     {
@@ -67,6 +67,5 @@ export const AppState = reactive({
       link: 'https://mindpalette.twsnider.work/'
     },
   ]
-
 })
 
