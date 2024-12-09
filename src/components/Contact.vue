@@ -12,7 +12,7 @@ import SectionHeader from "./globals/SectionHeader.vue";
   </div>
   <p class="fs-2 fw-bold">Send Me A Message</p>
   <div class="pb-4 pt-0">
-    <div class="form-container pb-3 rounded">
+    <div class="form-container rounded">
       <ContactForm />
     </div>
   </div>

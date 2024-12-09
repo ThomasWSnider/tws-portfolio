@@ -1,8 +1,9 @@
 <script setup>
 import { ref } from "vue";
 import ThankYouMessage from "./ThankYouMessage.vue";
+import { AppState } from "@/AppState";
 
-let submitted = ref(false);
+let submitted = ref(AppState.submitted);
 
 const editableMessageData = ref({
   name: '',
@@ -33,60 +34,62 @@ function handleIframeLoad() {
   <div v-if="submitted" class="p-5 bg-page">
     <ThankYouMessage />
   </div>
-  <form v-else ref="googleForm"
-    action="https://docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse"
-    target="hiddenIframe" id="bootstrapForm" @submit.prevent="submitGoogleForm" class="container px-4">
-    <div class="row justify-content-center">
-      <!-- Field type: "short" id: "1924068137" -->
-      <div class="col-6 mt-3 mx-auto">
-        <fieldset>
-          <legend for="1924068137">Email</legend>
-          <div class="form-group">
-            <input v-model="editableMessageData.email" id="1551830678" type="text" name="entry.1551830678"
-              class="form-control" required>
-          </div>
-        </fieldset>
-      </div>
+  <div v-else>
+    <form ref="googleForm"
+      action="https://docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse"
+      target="hiddenIframe" id="bootstrapForm" @submit.prevent="submitGoogleForm" class="container px-4">
+      <div class="row justify-content-center">
+        <!-- Field type: "short" id: "1924068137" -->
+        <div class="col-6 mt-3 mx-auto">
+          <fieldset>
+            <legend for="1924068137">Email</legend>
+            <div class="form-group">
+              <input v-model="editableMessageData.email" id="1551830678" type="text" name="entry.1551830678"
+                class="form-control" required>
+            </div>
+          </fieldset>
+        </div>
 
 
-      <!-- Field type: "short" id: "1570205503" -->
-      <div class="col-6 mt-3 mx-auto">
-        <fieldset>
-          <legend for="1570205503">Name</legend>
-          <div class="form-group">
-            <input v-model="editableMessageData.name" id="520950269" type="text" name="entry.520950269"
-              class="form-control" required>
-          </div>
-        </fieldset>
-      </div>
+        <!-- Field type: "short" id: "1570205503" -->
+        <div class="col-6 mt-3 mx-auto">
+          <fieldset>
+            <legend for="1570205503">Name</legend>
+            <div class="form-group">
+              <input v-model="editableMessageData.name" id="520950269" type="text" name="entry.520950269"
+                class="form-control" required>
+            </div>
+          </fieldset>
+        </div>
 
-      <!-- Field type: "short" id: "2145665440" -->
-      <div class="col-12 mt-3">
-        <fieldset>
-          <legend for="2145665440">Subject</legend>
-          <div class="form-group">
-            <input v-model="editableMessageData.subject" id="780295815" type="text" name="entry.780295815"
-              class="form-control">
-          </div>
-        </fieldset>
-      </div>
+        <!-- Field type: "short" id: "2145665440" -->
+        <div class="col-12 mt-3">
+          <fieldset>
+            <legend for="2145665440">Subject</legend>
+            <div class="form-group">
+              <input v-model="editableMessageData.subject" id="780295815" type="text" name="entry.780295815"
+                class="form-control">
+            </div>
+          </fieldset>
+        </div>
 
-      <!-- Field type: "paragraph" id: "1984878330" -->
-      <div class="col-12 mt-3">
-        <fieldset>
-          <legend for="1984878330">Message</legend>
-          <div class="form-group">
-            <textarea v-model="editableMessageData.message" id="1070418067" name="entry.1070418067" class="form-control"
-              style="height: 129px;" required></textarea>
-          </div>
-        </fieldset>
+        <!-- Field type: "paragraph" id: "1984878330" -->
+        <div class="col-12 mt-3">
+          <fieldset>
+            <legend for="1984878330">Message</legend>
+            <div class="form-group">
+              <textarea v-model="editableMessageData.message" id="1070418067" name="entry.1070418067"
+                class="form-control" style="height: 129px;" required></textarea>
+            </div>
+          </fieldset>
+        </div>
       </div>
+      <input type="hidden" name="fvv" value="1">
+      <input type="hidden" name="fbzx" value="-2698408044705719117">
+    </form>
+    <div class="col-12 text-center mt-3">
+      <button class="btn btn-outline-warning px-5 fs-5" type="submit" form="bootstrapForm">Send Message</button>
     </div>
-    <input type="hidden" name="fvv" value="1">
-    <input type="hidden" name="fbzx" value="-2698408044705719117">
-  </form>
-  <div class="col-12 text-center mt-3">
-    <button class="btn btn-outline-warning px-5 fs-5" type="submit" form="bootstrapForm">Send Message</button>
   </div>
 </template>
 
