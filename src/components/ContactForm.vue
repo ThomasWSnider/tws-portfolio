@@ -38,7 +38,7 @@ function handleIframeLoad() {
   <div v-if="AppState.submitted" class="p-5 bg-page">
     <ThankYouMessage />
   </div>
-  <div v-else>
+  <div v-else class="py-4">
     <form ref="googleForm"
       action="https://docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse"
       target="hiddenIframe" id="bootstrapForm" @submit.prevent="submitGoogleForm" class="container px-4">
@@ -49,7 +49,7 @@ function handleIframeLoad() {
             <legend for="1924068137">Email</legend>
             <div class="form-group">
               <input v-model="editableMessageData.email" id="1551830678" type="text" name="entry.1551830678"
-                class="form-control" required>
+                class="form-control form-control-lg" required maxlength="50" placeholder="Your Email">
             </div>
           </fieldset>
         </div>
@@ -61,7 +61,7 @@ function handleIframeLoad() {
             <legend for="1570205503">Name</legend>
             <div class="form-group">
               <input v-model="editableMessageData.name" id="520950269" type="text" name="entry.520950269"
-                class="form-control" required>
+                class="form-control form-control-lg" required maxlength="50" placeholder="Your Name">
             </div>
           </fieldset>
         </div>
@@ -72,7 +72,7 @@ function handleIframeLoad() {
             <legend for="2145665440">Subject</legend>
             <div class="form-group">
               <input v-model="editableMessageData.subject" id="780295815" type="text" name="entry.780295815"
-                class="form-control">
+                class="form-control form-control-lg" required maxlength="50" placeholder="Subject">
             </div>
           </fieldset>
         </div>
@@ -83,7 +83,8 @@ function handleIframeLoad() {
             <legend for="1984878330">Message</legend>
             <div class="form-group">
               <textarea v-model="editableMessageData.message" id="1070418067" name="entry.1070418067"
-                class="form-control" style="height: 129px;" required></textarea>
+                class="form-control form-control-lg" style="height: 129px;" required maxlength="1000"
+                placeholder="Message"></textarea>
             </div>
           </fieldset>
         </div>
@@ -108,5 +109,12 @@ textarea {
 input {
   outline: none !important;
   border: none;
+}
+
+legend {
+  color: transparent;
+  position: absolute;
+  right: 50%;
+  top: 100%;
 }
 </style>
