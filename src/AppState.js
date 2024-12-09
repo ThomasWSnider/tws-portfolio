@@ -4,7 +4,7 @@ import { reactive } from 'vue'
 export const AppState = reactive({
   /**@type {Boolean} whether the contact form has been submitted or not*/
   submitted: false,
-  /**@type {import('./models/Skill.js').Skill[]} An array of objects containing data about relevant skills*/
+  /**@type {Object[]} An array of objects containing data about relevant skills*/
   skills: [
     {
       name: "HTML",
@@ -52,7 +52,7 @@ export const AppState = reactive({
       color: "#563d7c"
     }
   ],
-  /**@type {import('./models/Project.js').Project[]} array of objects containing data about different projects*/
+  /**@type {Object[]} array of objects containing data about different projects*/
   projects: [
     {
       title: 'Keepr',

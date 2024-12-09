@@ -1,10 +1,9 @@
 <script setup>
 import { AppState } from "@/AppState";
-import { Project } from "@/models/Project";
 import { computed } from "vue";
 
 
-const props = defineProps({ project: Project })
+const props = defineProps({ project: Object })
 const projectIndex = computed(() => AppState.projects.findIndex((project) => props.project.title == project.title))
 </script>
 

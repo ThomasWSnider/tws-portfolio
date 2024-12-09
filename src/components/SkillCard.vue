@@ -1,9 +1,8 @@
 <script setup>
-import { Skill } from "@/models/Skill";
 import Icon from "./globals/Icon.vue";
 
 
-defineProps({ skill: Skill })
+defineProps({ skill: Object })
 </script>
 
 

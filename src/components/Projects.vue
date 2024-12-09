@@ -3,7 +3,6 @@ import { AppState } from "@/AppState";
 import SectionHeader from "./globals/SectionHeader.vue";
 import { computed } from "vue";
 import ProjectCard from "./ProjectCard.vue";
-import { applyStyles } from "@popperjs/core";
 
 const projects = computed(() => AppState.projects)
 </script>
