@@ -32,6 +32,6 @@ import { AppState } from './AppState.js';
 }
 
 div.container-fluid {
-  margin-bottom: 60px;
+  margin-bottom: 25px;
 }
 </style>

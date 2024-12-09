@@ -15,7 +15,7 @@ import Skills from "@/components/Skills.vue";
         <Introduction />
       </div>
     </div>
-    <div class="col-5">
+    <div class="col-5 pe-4">
       <div class="spacer"></div>
       <img
         src="https://images.unsplash.com/photo-1445499348736-29b6cdfc03b9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
