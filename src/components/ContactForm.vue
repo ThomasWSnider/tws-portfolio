@@ -60,8 +60,6 @@ function handleIframeLoad() {
               </div>
             </fieldset>
           </div>
-
-
           <!-- Field type: "short" id: "1570205503" -->
           <div class="col-6 mt-3 mx-auto">
             <fieldset>
@@ -72,7 +70,6 @@ function handleIframeLoad() {
               </div>
             </fieldset>
           </div>
-
           <!-- Field type: "short" id: "2145665440" -->
           <div class="col-12 mt-3">
             <fieldset>
@@ -83,7 +80,6 @@ function handleIframeLoad() {
               </div>
             </fieldset>
           </div>
-
           <!-- Field type: "paragraph" id: "1984878330" -->
           <div class="col-12 mt-3">
             <fieldset>
