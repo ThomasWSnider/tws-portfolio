@@ -25,7 +25,7 @@ function resetForm() {
 <style lang="scss" scoped>
 .message-container {
   background-color: #ffffff14;
-  height: 230px;
+  height: calc(332.6px - 48px);
 }
 
 .btn-reset-form {
