@@ -23,7 +23,7 @@ function handleSectionTagStyles() {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-sm navbar-dark px-3 fixed-top">
+  <nav class="navbar navbar-expand-sm navbar-dark px-3 fixed-top fade-in">
     <div class="navbar-brand d-flex">
       <div class="d-flex flex-column align-items-center">
         <p class="display-5 fw-bold my-1 ms-5">Thomas Snider</p>

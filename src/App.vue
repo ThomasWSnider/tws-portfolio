@@ -8,14 +8,8 @@ import { AppState } from './AppState.js';
   <header>
     <Navbar />
   </header>
-  <main>
-    <div class="container-fluid mt-5 rounded d-flex justify-content-center">
-      <div class="row py-3 mt-5 main-content">
-        <div class="col-12 mt-5">
-          <router-view />
-        </div>
-      </div>
-    </div>
+  <main class="mt-5">
+    <router-view />
   </main>
 </template>
 
@@ -24,11 +18,6 @@ import { AppState } from './AppState.js';
 
 :root {
   --main-height: calc(100vh - 32px - 70px);
-}
-
-.main-content {
-  background-color: #000000e6;
-  max-width: 85dvw;
 }
 
 div.container-fluid {
