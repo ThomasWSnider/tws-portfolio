@@ -22,6 +22,12 @@ function submitGoogleForm() {
     // @ts-ignore
     formElement.target = iframe.name
     formElement.submit()
+    editableMessageData.value = {
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    }
   } else {
     logger.log('an error ocurred when attempting to send message')
   }
