@@ -124,22 +124,22 @@ legend {
 
 .fade-slide-enter-active,
 .fade-slide-leave-active {
-  transition: opacity 0.75s cubic-bezier(0.4, 0, 0.1, 1), transform 0.75s ease-out;
+  transition: opacity 0.66s cubic-bezier(0.4, 0, 0.1, 1), transform 0.75s ease-out;
 }
 
 .fade-slide-leave-to {
   opacity: 0;
-  transform: translatex(10%);
+  transform: translatey(10%);
 }
 
 .fade-slide-enter-to,
 .fade-slide-leave-from {
   opacity: 1;
-  transform: translatex(0);
+  transform: translatey(0);
 }
 
 .fade-slide-enter-from {
   opacity: 0;
-  transform: translate(-10%);
+  transform: translatey(-10%);
 }
 </style>
