@@ -11,7 +11,7 @@ import Skills from "@/components/Skills.vue";
   <div class="container-fluid mt-5 rounded d-flex justify-content-center main-content fade-in">
     <div class="row py-3 px-2">
       <!-- SECTION Introduction and Photo -->
-      <section class="col-12">
+      <section class="col-12" id="about">
         <div class="row">
           <div class="col-7">
             <div class="row px-4">

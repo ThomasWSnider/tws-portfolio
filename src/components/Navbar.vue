@@ -3,20 +3,19 @@ import { onMounted, ref } from 'vue';
 import { loadState, saveState } from '../utils/Store.js';
 
 const theme = ref(loadState('theme') || 'dark')
-const sectionTags = ref([
-  { id: 'about', name: 'About' },
-  { id: 'skills', name: 'Skills' },
-  { id: 'projects', name: 'Projects' },
-  { id: 'contact', name: 'Contact' },
+const activeSection = ref('about')
+const sectionIds = ref([
+  'about',
+  'skills',
+  'projects',
+  'contact'
 ])
-const activeSectionTag = ref(null)
 
 onMounted(() => {
   document.documentElement.setAttribute('data-bs-theme', theme.value)
-  handleSectionTagStyles()
 })
 
-function handleSectionTagStyles() {
+function handleIntersection() {
 
 }
 
@@ -36,29 +35,33 @@ function handleSectionTagStyles() {
     <div class="collapse navbar-collapse justify-content-end me-5" id="navbarText">
       <ul class="navbar-nav ms-4">
         <li>
-          <a href="#" class="btn text-light lighten-30 selectable fs-6 fw-semibold">
+          <a href="#about" class="btn text-light lighten-30 fs-6 fw-semibold">
             About
+            <div class="navbar-border"></div>
           </a>
         </li>
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <a href="#skills" class="btn text-light lighten-30 selectable fs-6 fw-semibold">
+          <a href="#skills" class="btn text-light lighten-30 fs-6 fw-semibold">
             Skills
+            <div class="navbar-border"></div>
           </a>
         </li>
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <a href="#projects" class="btn text-light lighten-30 selectable fs-6 fw-semibold">
+          <a href="#projects" class="btn text-light lighten-30 fs-6 fw-semibold">
             Projects
+            <div class="navbar-border"></div>
           </a>
         </li>
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <a href="#contact" class="btn text-light lighten-30 selectable fs-6 fw-semibold">
+          <a href="#contact" class="btn text-light lighten-30 fs-6 fw-semibold">
             Contact
+            <div class="navbar-border"></div>
           </a>
         </li>
       </ul>
@@ -67,18 +70,31 @@ function handleSectionTagStyles() {
 </template>
 
 <style scoped>
-a:hover {
-  text-decoration: none;
-}
-
 .nav-link {
   text-transform: uppercase;
 }
 
-a.active {
-  border-bottom: 2px solid var(--bs-warning);
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
+a {
+  text-decoration: none;
+  min-width: 80px;
+
+  >div.navbar-border {
+    height: 100%;
+    width: 14px;
+    border-bottom: 3px solid var(--bs-warning);
+    position: relative;
+    bottom: -3px;
+    left: 0;
+    transition: width 0.15s ease-in-out;
+  }
+
+  &:hover>div.navbar-border {
+    width: 45%;
+  }
+
+  &.active-section>div.navbar-border {
+    width: 66%;
+  }
 }
 
 nav {
