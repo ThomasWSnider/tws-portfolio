@@ -19,6 +19,10 @@ function handleIntersection() {
 
 }
 
+function scrollToTop() {
+  window.scrollTo({ top: 0 })
+}
+
 </script>
 
 <template>
@@ -35,7 +39,7 @@ function handleIntersection() {
     <div class="collapse navbar-collapse justify-content-end me-5" id="navbarText">
       <ul class="navbar-nav ms-4">
         <li>
-          <a href="#about" :class="{ 'active-section': activeSection == 'about' }"
+          <a href="#about" @click.prevent="scrollToTop" :class="{ 'active-section': activeSection == 'about' }"
             class="btn text-light lighten-30 fs-6 fw-semibold">
             About
             <div class="navbar-border"></div>
