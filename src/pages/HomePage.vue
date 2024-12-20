@@ -12,7 +12,7 @@ import Skills from "@/components/Skills.vue";
     <div class="row py-3 px-2">
       <!-- SECTION Introduction and Photo -->
       <section class="col-12" id="about">
-        <div class="row">
+        <div class="row mb-5">
           <div class="col-7">
             <div class="row px-4">
               <Introduction />

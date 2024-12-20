@@ -1,23 +1,41 @@
 <script setup>
 import { onMounted, ref } from 'vue';
-import { loadState, saveState } from '../utils/Store.js';
+import { loadState } from '../utils/Store.js';
 
 const theme = ref(loadState('theme') || 'dark')
-const activeSection = ref('projects')
+const activeSection = ref('about')
 const sectionIds = ref([
   'about',
   'skills',
   'projects',
   'contact'
 ])
+const handleIntersection = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      activeSection.value = entry.target.id
+    }
+  });
+}
+const observer = new IntersectionObserver(handleIntersection, {
+  threshold: 0.25
+})
 
 onMounted(() => {
   document.documentElement.setAttribute('data-bs-theme', theme.value)
+  sectionIds.value.forEach((id) => {
+    const section = document.getElementById(id)
+    if (section) {
+      observer.observe(section)
+      const rect = section.getBoundingClientRect()
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+        activeSection.value = id
+      }
+    }
+  })
 })
 
-function handleIntersection() {
 
-}
 
 function scrollToTop() {
   window.scrollTo({ top: 0 })

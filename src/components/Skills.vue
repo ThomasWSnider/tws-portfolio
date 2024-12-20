@@ -15,7 +15,7 @@ const skills = computed(() => AppState.skills)
     <SectionHeader title="Skills" />
   </div>
   <div class="row">
-    <div v-for="skill in skills" :key="skill.name" class="col-3">
+    <div v-for="skill in skills" :key="skill.name" class="col-sm-4">
       <SkillCard :skill="skill" />
     </div>
   </div>
