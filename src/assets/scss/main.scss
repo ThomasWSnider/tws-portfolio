@@ -2,6 +2,10 @@
 @import "./_utilities.scss";
 @import "./loaders.scss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overscroll-behavior: none;
 }
