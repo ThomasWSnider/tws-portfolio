@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue';
 import { loadState, saveState } from '../utils/Store.js';
 
 const theme = ref(loadState('theme') || 'dark')
-const activeSection = ref('about')
+const activeSection = ref('projects')
 const sectionIds = ref([
   'about',
   'skills',
@@ -35,7 +35,8 @@ function handleIntersection() {
     <div class="collapse navbar-collapse justify-content-end me-5" id="navbarText">
       <ul class="navbar-nav ms-4">
         <li>
-          <a href="#about" class="btn text-light lighten-30 fs-6 fw-semibold">
+          <a href="#about" :class="{ 'active-section': activeSection == 'about' }"
+            class="btn text-light lighten-30 fs-6 fw-semibold">
             About
             <div class="navbar-border"></div>
           </a>
@@ -43,7 +44,8 @@ function handleIntersection() {
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <a href="#skills" class="btn text-light lighten-30 fs-6 fw-semibold">
+          <a href="#skills" :class="{ 'active-section': activeSection == 'skills' }"
+            class="btn text-light lighten-30 fs-6 fw-semibold">
             Skills
             <div class="navbar-border"></div>
           </a>
@@ -51,7 +53,8 @@ function handleIntersection() {
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <a href="#projects" class="btn text-light lighten-30 fs-6 fw-semibold">
+          <a href="#projects" :class="{ 'active-section': activeSection == 'projects' }"
+            class="btn text-light lighten-30 fs-6 fw-semibold">
             Projects
             <div class="navbar-border"></div>
           </a>
@@ -59,7 +62,8 @@ function handleIntersection() {
       </ul>
       <ul class="navbar-nav ms-4">
         <li>
-          <a href="#contact" class="btn text-light lighten-30 fs-6 fw-semibold">
+          <a href="#contact" :class="{ 'active-section': activeSection == 'contact' }"
+            class="btn text-light lighten-30 fs-6 fw-semibold">
             Contact
             <div class="navbar-border"></div>
           </a>
