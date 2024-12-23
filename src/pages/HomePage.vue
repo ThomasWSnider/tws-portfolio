@@ -13,17 +13,7 @@ import Skills from "@/components/Skills.vue";
       <!-- SECTION Introduction and Photo -->
       <section class="col-12" id="about">
         <div class="row mb-5">
-          <div class="col-7">
-            <div class="row px-4">
-              <Introduction />
-            </div>
-          </div>
-          <div class="col-5 pe-4">
-            <div class="spacer"></div>
-            <img
-              src="https://images.unsplash.com/photo-1445499348736-29b6cdfc03b9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="The feline placeholder" id="profileImg" class="rounded-1">
-          </div>
+          <Introduction />
         </div>
       </section>
       <!-- SECTION Skills and Experience -->
@@ -46,12 +36,6 @@ import Skills from "@/components/Skills.vue";
 </template>
 
 <style scoped lang="scss">
-#profileImg {
-  object-fit: cover;
-  object-position: center;
-  max-width: 100%;
-}
-
 .main-content {
   background-color: #000000e6;
   max-width: 85dvw;
