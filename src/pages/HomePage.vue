@@ -17,17 +17,17 @@ import Skills from "@/components/Skills.vue";
         </div>
       </section>
       <!-- SECTION Skills and Experience -->
-      <section class="col-12 mt-5 px-sm-4 px-2 position-relative">
+      <section class="col-12 mt-sm-5 mt-3 px-sm-4 px-2 position-relative">
         <div class="position-absolute section-id" id="skills"></div>
         <Skills />
       </section>
       <!-- SECTION Projects -->
-      <section class="col-12 mt-5 px-sm-4 px-2 position-relative">
+      <section class="col-12 mt-sm-5 mt-3 px-sm-4 px-2 position-relative">
         <div class="position-absolute section-id" id="projects"></div>
         <Projects />
       </section>
       <!-- SECTION Contact Form -->
-      <section class="col-12 mt-5 px-sm-4 px-2 position-relative">
+      <section class="col-12 mt-sm-5 mt-3 px-sm-4 px-0 position-relative">
         <div class="position-absolute section-id" id="contact"></div>
         <Contact />
       </section>

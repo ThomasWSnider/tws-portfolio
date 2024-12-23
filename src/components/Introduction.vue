@@ -45,8 +45,4 @@ import SectionHeader from "./globals/SectionHeader.vue";
   object-position: center;
   max-width: 100%;
 }
-
-p {
-  line-height: 2em;
-}
 </style>

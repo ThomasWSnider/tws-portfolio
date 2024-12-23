@@ -48,7 +48,7 @@ function handleIframeLoad() {
     <div v-else class="py-4">
       <form ref="googleForm"
         action="https://docs.google.com/forms/d/e/1FAIpQLSfCSnZ0jKYkQW9RlH38_xCVeXFtUJ79DRC7ARuEQVQufKvq9Q/formResponse"
-        target="hiddenIframe" id="bootstrapForm" @submit.prevent="submitGoogleForm" class="container px-4">
+        target="hiddenIframe" id="bootstrapForm" @submit.prevent="submitGoogleForm" class="container">
         <div class="row justify-content-center">
           <!-- Field type: "short" id: "1924068137" -->
           <div class="col-6 mt-3 mx-auto">
@@ -104,10 +104,12 @@ function handleIframeLoad() {
 
 
 <style lang="scss" scoped>
-textarea {
-  resize: none;
-  outline: none !important;
-  border: none;
+form {
+  padding: 0 1.5rem 0 1.5rem;
+
+  @media (max-width: 575.98px) {
+    padding: 0 .75rem 0 .75rem;
+  }
 }
 
 input {
@@ -120,6 +122,12 @@ legend {
   position: absolute;
   right: 50%;
   top: 100%;
+}
+
+textarea {
+  resize: none;
+  outline: none !important;
+  border: none;
 }
 
 .fade-slide-enter-active,
