@@ -52,6 +52,16 @@ import Skills from "@/components/Skills.vue";
   max-width: 100%;
 }
 
+.main-content {
+  background-color: #000000e6;
+  max-width: 85dvw;
+
+  @media (max-width: 575.98px) {
+    max-width: 100dvw;
+    margin: 0;
+  }
+}
+
 .spacer {
   height: 46px;
 }

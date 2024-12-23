@@ -45,9 +45,9 @@ function scrollToTop() {
 
 <template>
   <nav class="navbar navbar-expand-sm navbar-dark px-3 fixed-top fade-in">
-    <div class="navbar-brand d-flex">
+    <div class="navbar-brand d-flex mx-auto">
       <div class="d-flex flex-column align-items-center">
-        <p class="display-5 fw-bold my-1 ms-5">Thomas Snider</p>
+        <p class="display-5 fw-bold my-1 ms-sm-5 text-center">Thomas Snider</p>
       </div>
     </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
