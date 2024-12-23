@@ -9,7 +9,7 @@ const projects = computed(() => AppState.projects)
 
 
 <template>
-  <div class="section-header-padding">
+  <div class="section-header-padding mb-3 mb-sm-0">
     <SectionHeader title="Projects" />
   </div>
   <div class="row mt-2">

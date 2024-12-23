@@ -6,16 +6,15 @@ import SectionHeader from "./globals/SectionHeader.vue";
 
 
 <template>
-
-  <div class="col-12">
+  <div class="section-header-padding mb-3 mb-sm-0">
     <SectionHeader title="About" />
   </div>
   <div class="col-sm-7 col-12 order-1 order-sm-0">
-    <div class="row px-4">
-      <div class="col-12">
-        <p class="fs-1 fw-bold">Hello There!</p>
+    <div class="row px-sm-4 px-2">
+      <div class="col-12 text-center text-sm-start">
+        <p class="fs-1 fw-bold my-0">Hello There!</p>
       </div>
-      <div class="col-12 mt-3">
+      <div class="col-12 mt-sm-3 mt-0 px-0 text-center text-sm-start">
         <p>I am a driven and versatile web developer with a
           passion for problem
           solving. I
@@ -31,7 +30,7 @@ import SectionHeader from "./globals/SectionHeader.vue";
       </div>
     </div>
   </div>
-  <div class="col-sm-5 col-12 pe-4 order-0 order-sm-1 mb-3 mb-sm-0">
+  <div class="col-sm-5 col-12 pe-sm-4 p-0 order-0 order-sm-1 mb-3 mb-sm-0">
     <div class="spacer"></div>
     <img
       src="https://images.unsplash.com/photo-1445499348736-29b6cdfc03b9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

@@ -9,7 +9,7 @@ defineProps({ skill: Object })
 <template>
   <div class="skill-card mt-2 my-3 p-3 align-items-center">
     <Icon :name="skill.logo" :color="skill.color" size="xxx-large" />
-    <p class="mb-0 ms-3">{{ skill.name }}</p>
+    <p class="mb-0 ms-sm-3 ms-2">{{ skill.name }}</p>
   </div>
 </template>
 
