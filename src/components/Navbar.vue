@@ -85,10 +85,6 @@ a {
   &:hover>div.navbar-border {
     width: 45%;
   }
-
-  &.active-section>div.navbar-border {
-    width: 66%;
-  }
 }
 
 nav {
