@@ -15,7 +15,8 @@ import SectionHeader from "./globals/SectionHeader.vue";
         <p class="fs-1 fw-bold my-0">Hello There!</p>
       </div>
       <div class="col-12 mt-sm-3 mt-0 px-0 text-center text-sm-start">
-        <p>I am a driven and versatile web developer with a
+        <p>
+          I am a driven and versatile web developer with a
           passion for problem
           solving. I
           recently graduated from Boise Codeworks, a 12 week coding bootcamp, where I learned the ins and outs of web
@@ -26,7 +27,8 @@ import SectionHeader from "./globals/SectionHeader.vue";
           tools and technologies. I thrive in collaborative environments that encourage innovation and enjoy
           leveraging my analytical mindset to solve new and complex challenges. Whether I am working on front-end
           interfaces
-          or back-end logic, my goal is to create solutions that not only meet objectives but also delight users.</p>
+          or back-end logic, my goal is to create solutions that not only meet objectives but also delight users.
+        </p>
       </div>
     </div>
   </div>
