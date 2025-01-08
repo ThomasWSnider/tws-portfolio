@@ -32,8 +32,8 @@ import SectionHeader from "./globals/SectionHeader.vue";
   </div>
   <div class="col-sm-5 col-12 order-0 order-sm-1 mb-3 mb-sm-0 pe-sm-0 pe-md-1">
     <div class="spacer"></div>
-    <img src="../../public/img/Me.jpg" alt="Thomas Snider" id="profileImg" class="rounded-1 d-none d-sm-block">
-    <img src="../../public/img/MeForMobile.jpg" alt="Thomas Snider" id="profileImg" class="rounded-1 d-sm-none d-block">
+    <img src="/img/Me.jpg" alt="Thomas Snider" id="profileImg" class="rounded-1 d-none d-sm-block">
+    <img src="/img/MeForMobile.jpg" alt="Thomas Snider" id="profileImg" class="rounded-1 d-sm-none d-block">
   </div>
 </template>
 

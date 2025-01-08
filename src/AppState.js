@@ -56,14 +56,14 @@ export const AppState = reactive({
   projects: [
     {
       title: 'Keepr',
-      img: '/img/keepr-screenshot.png',
+      img: '/img/KeeprScreenshot.png',
       description: 'Keepr is a social media app that allows users to explore, create, and organize keeps into personal vaults, with options for private or public vaults. Built with Vue.js and Vue Router for the frontend, a .NET Web API backend using the Repository pattern, and MySQL with Dapper for the database, the app integrates Auth0 for secure authentication. Key features include engagement tracking for keeps, detailed views, and private vault functionality. The project follows a Figma design mock-up, adhering to UI/UX best practices, and meets all functionality through a comprehensive API test suite.',
       link: 'https://keepr.twsnider.work/'
     },
     {
       title: 'Mind Palette',
-      img: 'https://plus.unsplash.com/premium_photo-1680626561534-079425381952?q=80&w=2117&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      description: 'Mind Palette is a flashcard study app designed to help users efficiently create, manage, and study flashcards. Built with Vue.js, Node.js, Express, and MongoDB, the app features user registration and secure authentication via Auth0. Users can organize flashcards into decks, search and filter cards, and engage in study mode, which mimics the experience of physical flashcards. The app is responsive, user-friendly, and optimized for both desktop and mobile. MindPalette offers a seamless learning experience through its intuitive interface and robust functionality.',
+      img: '/img/MindPaletteScreenshot.png',
+      description: 'Mind Palette is a flashcard study app designed to help users efficiently create, manage, and study flashcards. Built with Vue.js, Node.js, Express, and MongoDB, the app features user registration and secure authentication via Auth0. Users can organize flashcards into decks, and engage with the study mode, which mimics the experience of physical flashcards. The app is responsive, user-friendly, and optimized for both desktop and mobile. MindPalette offers a seamless learning experience through its intuitive interface and robust functionality.',
       link: 'https://mindpalette.twsnider.work/'
     },
   ]
