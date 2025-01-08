@@ -10,7 +10,7 @@ import SectionHeader from "./globals/SectionHeader.vue";
     <SectionHeader title="About" />
   </div>
   <div class="col-sm-7 col-12 order-1 order-sm-0">
-    <div class="row px-sm-4 px-2">
+    <div class="row">
       <div class="col-12 text-center text-sm-start">
         <p class="fs-1 fw-bold my-0">Hello There!</p>
       </div>
@@ -30,11 +30,10 @@ import SectionHeader from "./globals/SectionHeader.vue";
       </div>
     </div>
   </div>
-  <div class="col-sm-5 col-12 pe-sm-4 p-0 order-0 order-sm-1 mb-3 mb-sm-0">
+  <div class="col-sm-5 col-12 order-0 order-sm-1 mb-3 mb-sm-0 pe-sm-0 pe-md-1">
     <div class="spacer"></div>
-    <img
-      src="https://images.unsplash.com/photo-1445499348736-29b6cdfc03b9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      alt="The feline placeholder" id="profileImg" class="rounded-1">
+    <img src="../../public/img/Me.jpg" alt="Thomas Snider" id="profileImg" class="rounded-1 d-none d-sm-block">
+    <img src="../../public/img/MeForMobile.jpg" alt="Thomas Snider" id="profileImg" class="rounded-1 d-sm-none d-block">
   </div>
 </template>
 
