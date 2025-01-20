@@ -32,10 +32,9 @@ import SectionHeader from "./globals/SectionHeader.vue";
       </div>
     </div>
   </div>
-  <div class="col-sm-5 col-12 order-0 order-sm-1 mb-3 mb-sm-0 pe-sm-0 pe-md-1">
+  <div class="col-sm-5 col-12 order-0 order-sm-1 mb-3 mb-sm-0 pe-sm-0 pe-md-1 d-flex justify-content-center">
     <div class="spacer"></div>
-    <img src="/img/Me.jpg" alt="Thomas Snider" id="profileImg" class="rounded-1 d-none d-sm-block">
-    <img src="/img/MeForMobile.jpg" alt="Thomas Snider" id="profileImg" class="rounded-1 d-sm-none d-block">
+    <img src="/img/MeForMobile.jpg" alt="Thomas Snider" id="profileImg" class="rounded-1">
   </div>
 </template>
 
@@ -45,5 +44,7 @@ import SectionHeader from "./globals/SectionHeader.vue";
   object-fit: cover;
   object-position: center;
   max-width: 100%;
+  max-height: 50vh;
+  transform: scaleX(-1);
 }
 </style>

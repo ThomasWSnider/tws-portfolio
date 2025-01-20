@@ -18,7 +18,7 @@ const projectIndex = computed(() => AppState.projects.findIndex((project) => pro
       <p>{{ project.description }}</p>
     </div>
     <div class="col-sm-6 col-12 order-sm-1 order-0 p-0">
-      <a :href="project.link">
+      <a :href="project.link" target="_blank" rel="noopener noreferrer">
         <img :src="project.img" :alt="`${project.title} Screenshot`" class="rounded mb-sm-0 mb-3">
       </a>
     </div>
@@ -28,7 +28,7 @@ const projectIndex = computed(() => AppState.projects.findIndex((project) => pro
       <p class="fs-3 fw-bold">{{ project.title }}</p>
     </div>
     <div class="col-sm-6 col-12 px-0">
-      <a :href="project.link">
+      <a :href="project.link" target="_blank" rel="noopener noreferrer">
         <img :src="project.img" :alt="`${project.title} Screenshot`" class="rounded mb-sm-0 mb-3">
       </a>
     </div>
